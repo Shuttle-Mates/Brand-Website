@@ -19,7 +19,7 @@ header {
 /* Changing the background color for the navigation bar */
 
 .navbar {
-	background-color: #5438DC;
+	background-color: #EDEDF4;
 }
 
 /* Effect on social media buttons */
@@ -46,8 +46,14 @@ footer a:hover {
 
 .title-text
 {
-    font: "Anton", normal;
-	color: white;
+    font: "Anton&family", normal;
+	color: #5438DC;
+}
+
+.body-special-text
+{
+	font: "Knewave&family", normal;
+	color: black;
 }
 
 .body-text
@@ -56,8 +62,3 @@ footer a:hover {
 	color: black;
 }
 
-.body-special-text
-{
-	font: "Knewave", normal;
-	color: black;
-}
