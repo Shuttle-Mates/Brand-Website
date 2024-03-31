@@ -46,19 +46,58 @@ footer a:hover {
 
 .title-text
 {
-    font: "Anton&family", normal;
+    font-family: "Anton", normal;
 	color: #5438DC;
 }
 
 .body-special-text
 {
-	font: "Knewave&family", normal;
+	font-family: "Knewave", normal;
 	color: black;
 }
 
 .body-text
 {
-	font: "Montserrat", normal;
+	font-family: "Montserrat", normal;
 	color: black;
 }
 
+.heropanel--video {
+    font-family:"Anton", normal;
+    min-height:500px;
+}
+
+@keyframes gm-slidein {
+    from {
+        -webkit-transform:translate3d(0,-100%,0);
+        opacity:0;
+        transform:translate3d(0,-100%,0);
+    }
+	
+    to {
+        -webkit-transform:none;
+        opacity:1;
+        transform:none;
+    }
+}
+
+.heropanel--video {
+    position: relative; /* Ensure relative positioning for absolute positioning of child elements */
+}
+
+.heropanel__content {
+    position: absolute; /* Position the content absolutely relative to the header */
+    bottom: 0; /* Align content to the bottom of the header */
+    left: 0; /* Align content to the left of the header */
+    padding: 20px; /* Add some padding to the content */
+}
+
+.heropanel__content h1 {
+    margin: 0; /* Remove default margin */
+    color: #fff; /* Set text color */
+}
+
+.heropanel__content h1 a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color */
+}
