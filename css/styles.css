@@ -251,7 +251,6 @@ body {
     background: #ffffff;
     box-shadow: 10px 40px 40px rgba(0,0,0,.2);
     pointer-events: none;
-    right: auto;
     width: 100vw;
 }
 .particles-js-canvas-el {
@@ -391,29 +390,9 @@ ul.contact-info li {
 	font-family: "Montserrat", normal;
 }
 .contact-page .info-left i{
-color: #FE846F;
+color: #5438DC;
 }
-.btn {
-display: inline-block;
-    font-weight: 400;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    font-family: 'Poppins', sans-serif;
-    padding: 10px 30px 10px;
-    font-size: 17px;
-    line-height: 28px;
-    border: 0px;
-    border-radius: 10px;
-    -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-    -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+
 }
 .btn-big {
     color: #ffffff;
