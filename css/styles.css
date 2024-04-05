@@ -201,3 +201,9 @@ body {
 }
 
 
+.img-thumbnail {
+  max-width: 20%;
+  height: auto;
+}
+
+
