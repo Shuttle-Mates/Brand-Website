@@ -1,39 +1,57 @@
 /* Importing a Google Font */
-
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Knewave&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 	
-/* Changing the main font and background colour */
 
+/* Changing the main font and background colour */
 body {
 	font-family: "Anton", "Knewave", "Montserrat", sans-serif;
 	color: black;
 	background-color: white;
 }
 
-/* Changing the background colour for the header */
-
-header {
-	background-color: #000060;
-}
-
-/* Changing the background color for the navigation bar */
-
+/* Navigation bar */
 .navbar {
 	background-color: #EDEDF4;
 }
 
-/* Effect on social media buttons */
-
-footer a:hover {
-	opacity: .5;
+.nav-link {
+	color: #5438DC;
 }
 
-/* Corporate navbar */
-
-#navbar-corporate a.active {
-	color: #800000;
-	font-weight: bold;
+.nav-link:hover {
+    color: #EC763E;
+	opacity: .9;
 }
+
+.nav-link:active {
+	background-color: #5438DC;
+	color: white;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 41.875%;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.text-overlay-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding-top: 10%;
+
+}
+
 
 /* Hero Section shadow */
 
@@ -50,6 +68,12 @@ footer a:hover {
 	color: #5438DC;
 }
 
+.title-text-white{
+    font-family: "Anton", normal;
+	color: white;
+}
+
+
 .body-special-text
 {
 	font-family: "Knewave", normal;
@@ -62,42 +86,116 @@ footer a:hover {
 	color: black;
 }
 
-.heropanel--video {
-    font-family:"Anton", normal;
-    min-height:500px;
+.btn-primary {
+	background-color: #5438DC;
 }
 
-@keyframes gm-slidein {
-    from {
-        -webkit-transform:translate3d(0,-100%,0);
-        opacity:0;
-        transform:translate3d(0,-100%,0);
+.btn-primary:hover {
+    background-color: #EC763E;
+	opacity: .9;
+}
+
+
+
+/* Typer effect Animation (adapted from https://www.codeply.com/go/orizmNWvT3/css-only-typing-animation-with-multiple-words*/
+@media (max-width:768px) {
+    h1 {
+        font-size: 5rem;
     }
-	
-    to {
-        -webkit-transform:none;
-        opacity:1;
-        transform:none;
-    }
 }
 
-.heropanel--video {
-    position: relative; /* Ensure relative positioning for absolute positioning of child elements */
+.text-typing, .text-nowrap {
+    white-space:nowrap;
+    display: block;
 }
 
-.heropanel__content {
-    position: absolute; /* Position the content absolutely relative to the header */
-    bottom: 0; /* Align content to the bottom of the header */
-    left: 0; /* Align content to the left of the header */
-    padding: 20px; /* Add some padding to the content */
+
+.typing-words span {
+    text-indent: 0px;
+    position: absolute;
+	overflow: hidden;
+	white-space: nowrap;
+	color: #FFFFFF;
+    visibility: hidden;
+    border-right: 4px solid transparent;
+    max-width: 32rem; /* width of widest string */
+}
+/* steps is number of chars-1 */
+.typing-words span:nth-child(1) {
+	animation: typing 0.7s steps(5), typingReverse 0.7s steps(5) 0.7s, blink-wait 1s step-end 1 1.4s, blink-caret 0.6s step-end infinite;
+}
+.typing-words span:nth-child(2) { 
+	animation: typing 0.7s steps(5) 2.4s, typingReverse 0.7s steps(5) 3.1s, blink-wait 1s step-end 1 3.8s, blink-caret 0.6s step-end infinite;
+}
+.typing-words span:nth-child(3) { 
+	animation: typing 0.7s steps(5) 4.8s, typingReverse 0.7s steps(5) 5.5s, blink-wait 1s step-end 1 6.2s, blink-caret 0.6s step-end infinite;
+}
+.typing-words span:nth-child(4) { 
+	animation: typing 0.7s steps(5) 7.2s, typingReverse 0.7s steps(5) 7.9s, blink-wait 1s step-end 1 8.5s, blink-caret 0.6s step-end infinite;
+}
+/* pause on last word, end cursor blink */
+.typing-words span:nth-child(5) {  
+	animation: blink-caret 0.6s step-end 7 9.5s, typing 1s steps(7) 9.5s forwards;
 }
 
-.heropanel__content h1 {
-    margin: 0; /* Remove default margin */
-    color: #fff; /* Set text color */
+@keyframes typing {
+    from { width: 0; visibility: hidden; }
+    to { width: 100%; visibility: visible; color: #FFFFFF; }
 }
 
-.heropanel__content h1 a {
-    text-decoration: none; /* Remove underline from links */
-    color: inherit; /* Inherit text color */
+@keyframes typingReverse {
+    from { width: 100%; visibility: visible; color: #FFFFFF; }
+    to { width: 0; }
 }
+
+@keyframes blink-wait {
+    from, to { width: 0; visibility: hidden; }
+    30%, 60% { width: 0px; visibility: visible; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #FFFFFF; }
+}
+
+
+.footer-color {
+	background-color: #EDEDF4;
+}
+
+
+
+/* Services page - centred hero screenshot (adapted from https://getbootstrap.com/docs/5.3/examples/heroes/*/
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+/* Services page - pricing (adapted from https://getbootstrap.com/docs/5.3/examples/pricing/*/
+
+	.main-price-bg {
+	background-color: #5438DC;
+	color: white;
+	}
+
+
+	.container {
+	  max-width: 1250px;
+	}
+
+	.pricing-header {
+	  max-width: 700px;
+	}
+
+
+/* About us page - pricing (adapted from https://getbootstrap.com/docs/5.3/examples/features/*/
+.card-cover {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
